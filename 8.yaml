@@ -1,0 +1,12 @@
+---
+  - name: when 1
+    hosts: serverc.test.com
+    tasks:
+      - name: example when 1
+        debug:
+          msg: this system is 64bit
+        when: ansible_facts.machine == "x86_64"   
+
+      - name: just print msg
+        debug:
+          msg: sleepy  
