@@ -1,0 +1,13 @@
+---
+  - name: show disk usage
+    hosts: serverc.test.com
+    gather_facts: no
+    tasks:
+      - name: run df command
+        shell:
+          cmd: df -h
+        register: abc
+
+      - name: print abc values
+        debug:
+          var: abc     
