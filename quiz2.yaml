@@ -1,8 +1,8 @@
 ---
-  - name: 메모리가 300MB 이상 되었을 때 메시지 출력
+  - name: quiz 2
     hosts: serverd.test.com
     tasks:
-      - name: example when 1
+      - name: check memory
         debug:
-          msg: this system has big memory
+          msg: "this system has big memory"
         when: ansible_facts.memfree_mb >= 300
