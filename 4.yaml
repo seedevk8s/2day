@@ -1,0 +1,12 @@
+---
+  - name: create group
+    hosts: all
+    vars_files: 
+      - vars/group.yaml
+    tasks:
+      - name: create group using variable
+        group:
+          name: "{{ gname }}"
+          state: present
+          gid: "{{ gid }}"
+          
