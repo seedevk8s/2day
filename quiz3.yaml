@@ -3,6 +3,7 @@
   hosts: serverd.test.com
   vars_files:
     - vars/install_pkg.yaml
+    - vars/mysvc.yaml
   tasks:
     - name: packages install
       dnf:
@@ -19,10 +20,7 @@
         name: "{{ item }}"
         state: started
         enabled: yes
-      loop:
-        - httpd
-        - vsftpd
-        - mariadb  
+      loop: "{{ mysvc }}"
 
 
     - name: add firewall rule
