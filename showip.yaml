@@ -1,0 +1,9 @@
+---
+  - name: print hostname and ip address
+    hosts: all
+    tasks:
+      - name: show hostname & ip 
+        debug:
+          msg: >
+            IP address of "{{ ansible_facts }}"
+            is  "{{ ansible_facts['all_ipv4_addresses'] }}"
