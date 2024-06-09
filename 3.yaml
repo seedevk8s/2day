@@ -1,0 +1,10 @@
+---
+  - name: using host vars
+    hosts: serverc.test.com
+    vars_files: 
+      - host_vars/serverc.test.com
+    tasks:
+      - name: install {{ package }}
+        dnf:
+          name: {{ package }}
+          state: present 
