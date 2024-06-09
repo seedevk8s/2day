@@ -5,4 +5,4 @@
       - name: check memory
         debug:
           msg: "this system has big memory"
-        when: ansible_facts.memfree_mb >= 300
+        when: ansible_facts.memfree_mb >= 5000
