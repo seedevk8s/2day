@@ -4,6 +4,6 @@
     tasks:
       - name: show hostname & ip 
         debug:
-          msg: >
+          msg: |
             IP address of "{{ ansible_facts }}"
             is  "{{ ansible_facts['all_ipv4_addresses'] }}"
