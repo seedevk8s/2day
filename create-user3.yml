@@ -1,0 +1,11 @@
+---
+  - hosts: all
+    vars:
+      user: kosta
+
+    tasks:
+      - name: Create User {{ user }} 
+        ansible.builtin.user:
+          name: "{{ user }}" 
+          state: present
+              
