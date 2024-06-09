@@ -4,7 +4,7 @@
     vars_files: 
       - host_vars/serverc.test.com
     tasks:
-      - name: install {{ package }}
+      - name: install "{{ package }}"
         dnf:
-          name: {{ package }}
+          name: "{{ package }}"
           state: present 
