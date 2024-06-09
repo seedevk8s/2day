@@ -1,0 +1,24 @@
+---
+  - name: print facts
+    hosts: serverc.test.com
+    tasks: 
+      - name: print char 1
+        debug:
+          msg:  hi student
+                today is sunday
+                how a u?
+
+      - name: print char 2
+        debug:
+          msg: |
+                hi student
+                today is sunday
+                how a u?
+
+      - name: print char 3
+        debug:
+          msg: >
+                hi student
+                today is sunday
+                how a u?        
+                
