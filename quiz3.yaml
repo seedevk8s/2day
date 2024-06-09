@@ -16,26 +16,13 @@
    
     - name: start web service
       ansible.builtin.service:
-        name: httpd
+        name: "{{ item }}"
         state: started
         enabled: yes
-
-
-
-
-    - name: start db service
-      ansible.builtin.service:
-        name: mariadb
-        state: started
-        enabled: yes
-   
-    - name: start ftp service
-      ansible.builtin.service:
-        name: vsftpd
-        state: started
-        enabled: yes
-
-
+      loop:
+        - httpd
+        - vsftpd
+        - mariadb  
 
 
     - name: add firewall rule
