@@ -1,6 +1,7 @@
 ---
   - name: create group
     hosts: all
+    gather_facts: no 
     vars_files: 
       - vars/group.yaml
     tasks:
@@ -9,4 +10,3 @@
           name: "{{ gname }}"
           state: present
           gid: "{{ gid }}"
-          
