@@ -1,0 +1,7 @@
+---
+  - name: collect facts
+    hosts: serverd.test.com
+    tasks:
+      - name: show me new facts 
+        debug:
+          var: ansible_facts
